@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-albedrozes-navy: #001A70;
+  --color-albedrozes-navy-dark: #00124D;
+  --color-albedrozes-blue: #1E88E5;
+  --color-albedrozes-blue-light: #60A5FA;
+}
+
+/* Global Base & Typography */
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 10% 0%, rgba(0, 26, 112, 0.04) 0px, transparent 50%),
+    radial-gradient(at 90% 100%, rgba(30, 136, 229, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #0f172a;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Enterprise Design System Utilities */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 30px -10px rgba(0, 26, 112, 0.05), 0 1px 3px rgba(15, 23, 42, 0.02);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(191, 219, 254, 0.9);
+  box-shadow: 0 20px 40px -12px rgba(0, 26, 112, 0.09);
+}
+
+.glass-card-pop {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 247, 255, 0.8) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 2px solid rgba(30, 136, 229, 0.3);
+  box-shadow: 0 20px 40px -10px rgba(0, 26, 112, 0.12);
+}
+
+/* Corporate Buttons - Albedrozes Navy & Tech Azure */
+.btn-primary {
+  background: linear-gradient(135deg, #001A70 0%, #1E88E5 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 14px rgba(0, 26, 112, 0.25);
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00124D 0%, #1565C0 100%);
+  box-shadow: 0 6px 20px rgba(30, 136, 229, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #001A70;
+  font-weight: 700;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  border-color: #1E88E5;
+  color: #1E88E5;
+  transform: translateY(-1px);
+}
+
+.logo-transparent {
+  background-color: transparent !important;
+}
+
+/* Custom Albedrozes Brand Tokens */
+.text-brand-navy {
+  color: #001A70;
+}
+
+.text-brand-azure {
+  color: #1E88E5;
+}
+
+.bg-brand-navy {
+  background-color: #001A70;
+}
+
+.bg-brand-azure {
+  background-color: #1E88E5;
+}
+
+.border-brand-navy {
+  border-color: #001A70;
+}
+
+.border-brand-azure {
+  border-color: #1E88E5;
+}
+
+/* Digital Monospace Telemetry font */
+.font-mono-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Prevent double-tap zoom on iOS */
+button, a {
+  touch-action: manipulation;
+}

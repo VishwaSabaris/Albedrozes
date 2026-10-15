@@ -1,0 +1,253 @@
+/* ==============================================================================
+   Albedrozes Autonomous Rover - Telemetry Dashboard Styles
+   ============================================================================== */
+
+/* Rover Status Section */
+.status-section {
+  max-width: 1400px;
+  margin: 2rem auto 0;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(0, 26, 112, 0.06);
+}
+
+@media (min-width: 768px) {
+  .status-section {
+    padding: 2rem;
+  }
+}
+
+.status-header,
+.metrics-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .status-header,
+  .metrics-header {
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+}
+
+.active-rover-badge {
+  position: relative;
+  right: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #001A70 0%, #1E88E5 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 26, 112, 0.25);
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .active-rover-badge {
+    position: absolute;
+    right: 0;
+    font-size: 0.875rem;
+    margin-top: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.rover-badge-icon {
+  font-size: 1.2rem;
+}
+
+.rover-badge-text {
+  letter-spacing: 0.5px;
+}
+
+.status-header h2,
+.metrics-header h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .status-header h2,
+  .metrics-header h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.status-icon,
+.metrics-icon {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .status-icon,
+  .metrics-icon {
+    font-size: 1.75rem;
+  }
+}
+
+.status-cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .status-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.status-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .status-card {
+    padding: 1.5rem;
+  }
+}
+
+.status-card:hover {
+  transform: translateY(-3px);
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 25px -5px rgba(0, 26, 112, 0.08);
+}
+
+.status-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #64748b;
+  margin: 0 0 0.75rem 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.status-time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #e11d48;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 640px) {
+  .status-time {
+    font-size: 2.25rem;
+    letter-spacing: 2px;
+  }
+}
+
+.status-format {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0.5rem 0 0 0;
+}
+
+.reset-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-reset {
+  padding: 0.75rem 1.75rem;
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-reset:hover {
+  background: #ffffff;
+  border-color: #94a3b8;
+  color: #0f172a;
+  transform: translateY(-1px);
+}
+
+.metrics-section {
+  max-width: 1400px;
+  margin: 1.5rem auto 2rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px -2px rgba(0, 26, 112, 0.06);
+}
+
+@media (min-width: 768px) {
+  .metrics-section {
+    padding: 2rem;
+  }
+}
+
+.metrics-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .metrics-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .metrics-cards {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.metric-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.25rem 1rem;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.metric-card:hover {
+  background: #ffffff;
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 20px -4px rgba(30, 136, 229, 0.12);
+}
